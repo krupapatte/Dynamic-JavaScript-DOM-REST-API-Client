@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Student demo of async JavaScript, REST APIs, search, sorting and local storage.">
+<title>FetchStore | REST API Client</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/api.js" defer></script><script src="js/app.js" defer></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="#"><span class="brand-mark">F</span> FetchStore</a><span class="header-note">A small REST API client demo</span></header>
+<main class="container">
+<section class="hero"><p class="eyebrow">LIVE PRODUCT EXPLORER</p><h1>Find something <span>useful.</span></h1><p class="hero-copy">Browse products loaded from a public API. Search, filter, and sort results without reloading the page.</p>
+<div class="hero-stats"><div><strong id="product-count">—</strong><span>Products shown</span></div><div><strong id="category-count">—</strong><span>Categories</span></div><div><strong>REST</strong><span>Data source</span></div></div></section>
+<section class="toolbar" aria-label="Product filters"><div><label for="search-input">Search products</label><input id="search-input" type="search" placeholder="Try “phone” or “bag”..." autocomplete="off"></div><div><label for="sort-select">Sort by</label><select id="sort-select"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating-desc">Highest rating</option><option value="title-asc">Name: A to Z</option></select></div><button id="refresh-button" class="button button-dark" type="button">Refresh products</button></section>
+<nav id="category-tabs" class="category-tabs" aria-label="Filter by category"><button class="category-tab active" type="button" data-category="all" aria-pressed="true">All products</button></nav>
+<div id="status-message" class="status-message" role="status" aria-live="polite">Loading products…</div><div id="error-message" class="error-message" role="alert" hidden></div>
+<section id="product-grid" class="product-grid" aria-label="Products"><div class="skeleton-card" aria-hidden="true"><div class="skeleton-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div></section>
+<section class="saved-panel"><div><p class="eyebrow">YOUR BROWSER</p><h2>Saved items</h2><p class="muted">Saved locally in this browser using localStorage.</p></div><div class="saved-summary"><strong id="saved-count">0</strong><span>saved products</span></div></section><div id="saved-grid" class="saved-grid"></div>
+</main><footer class="site-footer"><span>FetchStore · Student project</span><span>Data provided by <a href="https://fakestoreapi.com/" target="_blank" rel="noreferrer">Fake Store API</a></span></footer>
+</body></html>
